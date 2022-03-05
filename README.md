@@ -35,8 +35,10 @@ You can either set your API Key with an environment variable called `BT-API-KEY`
 
 In this example, we use both the `tokenize` and `detokenize` middleware to secure your data on way into your request and then detokenize the response for values you want to be able to display back to your customer. For example, you want to encrypt an `emailAddress` and then be able to display it back to the user.
 
+[Full code can be found here.](https://github.com/armsteadj1/example-express-basistheory-tokenize)
+
 ```javascript
-import { tokenize } from "express-basistheory-tokenize";
+import { tokenize, detokenize } from "express-basistheory-tokenize";
 
 const app = express();
 
@@ -46,6 +48,7 @@ app.use(express.json());
 app.use(
   tokenize({
     tokenize: {
+     "apiKey": "<PUT KEY HERE>", 
       "/": ["encrypt_this_value", "keep_this_safe"], // this will tokenize the property encrypt_this_value on the path '/'
     },
   })
@@ -55,6 +58,7 @@ app.use(
 app.use(
   detokenize({
     detokenize: {
+      "apiKey": "<PUT KEY HERE>",
       "/": ["encrypt_this_value"], // this will tokenize the property encrypt_this_value on the path '/'
     },
   })
