@@ -22,9 +22,9 @@ yarn add express-basistheory-tokenize
 
 ### Get a Basis Theory API Key
 
-1. Head over to (Basis Theory)[https://basistheory.com] to create an account
+1. Head over to [Basis Theory](https://basistheory.com) to create an account
 2. Create a new `server-to-server` Appliation with the following permissions: `token:general:create` and `token:general:read`.
-2.1. (or click here to pre-fill the Application form)[https://portal.basistheory.com/applications/create?name=Express+Middleware&permissions=token%3Ageneral%3Acreate&permissions=token%3Ageneral%3Aread%3Ahigh]
+2.1. [or click here to pre-fill the Application form](https://portal.basistheory.com/applications/create?name=Express+Middleware&permissions=token%3Ageneral%3Acreate&permissions=token%3Ageneral%3Aread%3Ahigh)
 3. Copy the API Key you create and use it below
 
 ### Set Basis Theory API Key
@@ -87,7 +87,7 @@ Response:
 }
 ```
 
-🎉 - You can now save the `encrypt_this_value` and `keep_this_safe` to your database without worrying about storying the actual dangerous data and can call Basis Theory you need to use it! Check out more about how you can use the data on (Basis Theory's documentation)[https://developers.basistheory.com].
+🎉 - You can now save the `encrypt_this_value` and `keep_this_safe` to your database without worrying about storying the actual dangerous data and can call Basis Theory you need to use it! Check out more about how you can use the data on [Basis Theory's documentation](https://developers.basistheory.com).
 
 
 ### Test
