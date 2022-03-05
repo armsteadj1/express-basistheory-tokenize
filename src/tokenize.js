@@ -1,8 +1,9 @@
 const { BasisTheory } = require("@basis-theory/basis-theory-js");
+const getApiKey = require("./getApiKey");
 
 const tokenize = (options) => {
   let bt;
-  new BasisTheory().init(options.apiKey).then((value) => (bt = value));
+  new BasisTheory().init(getApiKey(options.apiKey)).then((value) => (bt = value));
 
   return (req, _res, next) => {
     const body = req.body;
