@@ -39,6 +39,7 @@ In this example, we use both the `tokenize` and `detokenize` middleware to secur
 
 ```javascript
 import { tokenize, detokenize } from "express-basistheory-tokenize";
+import express from "express";
 
 const app = express();
 
@@ -47,8 +48,8 @@ app.use(express.json());
 // configure which dangerous values to tokenize before calling request code
 app.use(
   tokenize({
+    apiKey: "<PUT KEY HERE>",
     tokenize: {
-     "apiKey": "<PUT KEY HERE>", 
       "/": ["encrypt_this_value", "keep_this_safe"], // this will tokenize the property encrypt_this_value on the path '/'
     },
   })
@@ -57,8 +58,8 @@ app.use(
 // configure which token values to detokenize before responding
 app.use(
   detokenize({
+    apiKey: "<PUT KEY HERE>",
     detokenize: {
-      "apiKey": "<PUT KEY HERE>",
       "/": ["encrypt_this_value"], // this will tokenize the property encrypt_this_value on the path '/'
     },
   })
@@ -76,7 +77,7 @@ Test it out!
 curl --location --request POST 'http://localhost:3000' \
 --header 'Content-Type: application/json' \
 --data-raw '{
-    "encrypt_this_value": "dangerous data",
+    "keep_this_safe": "dangerous data",
     "dont_encrypt": "not dangerous",
     "encrypt_this_value": "data from customer"
 }'
