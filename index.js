@@ -1,3 +1,4 @@
 const tokenize = require("./src/tokenize");
+const detokenize = require("./src/detokenize");
 
-module.exports = { tokenize };
+module.exports = { tokenize, detokenize };

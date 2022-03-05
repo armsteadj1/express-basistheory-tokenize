@@ -12,6 +12,7 @@
     "@basis-theory/basis-theory-js": "^1.22.2"
   },
   "devDependencies": {
-    "jest": "^27.5.1"
+    "jest": "^27.5.1",
+    "prettier": "^2.5.1"
   }
 }
