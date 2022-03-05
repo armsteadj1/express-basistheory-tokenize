@@ -1,6 +1,6 @@
 {
   "name": "express-basistheory-tokenize",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "automatically tokenize requests and detokenize responses to avoid dangerous plaintext data touching your code",
   "main": "index.js",
   "scripts": {
