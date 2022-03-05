@@ -1,14 +1,17 @@
 {
-  "name": "express-tokenize",
-  "version": "1.0.0",
+  "name": "express-basistheory-tokenize",
+  "version": "1.0.1",
   "description": "automatically tokenize requests and detokenize responses to avoid dangerous plaintext data touching your code",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@basis-theory/basis-theory-js": "^1.22.2"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
   }
 }
