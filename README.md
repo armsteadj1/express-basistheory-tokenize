@@ -1,6 +1,6 @@
 # NodeJs Middleware for Tokenizing request/response data
 
-This middleware helpw when you're looking to secure, encrypt, tokenize, or otherwise not lose data you consider senstiive. By including one middleware, express will automatically tokenize (secure your data with BasisTheory) the properties you tell it to. Finally, the middleware will also handle turning the value back into the raw value automatically as well responding with a token.
+This middleware helpw when you're looking to secure, encrypt, tokenize, or otherwise not lose data you consider senstiive - ALL WITHOUT CHANGING YOUR APPLICATION CODE. By including one middleware, express will automatically tokenize (secure your data with BasisTheory) the properties you tell it to. Finally, the middleware will also handle turning the value back into the raw value automatically as well responding with a token.
 
 ## Installation
 
