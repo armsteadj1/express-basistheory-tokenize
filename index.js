@@ -1,3 +1,23 @@
-exports.printMsg = function() {
-    console.log("This is a message from the demo package");
-  }
+const { BasisTheory } = require('@basis-theory/basis-theory-js');
+
+exports.tokenize = (options) => {
+    let bt;
+    new BasisTheory().init(options.apiKey).then(value => bt = value); 
+
+    return (req, res, next) => {
+        const body = req.body;
+        if(!body || typeof body !== "object") {
+            next();
+            return;
+        }
+
+        const matchingKeys = [].concat(options.tokenize[req.path]).filter(item => Object.keys(body).includes(item));
+        const objectToTokenize = matchingKeys.reduce((obj, current) => ({[current]: body[current], ...obj}), {})
+        
+        bt.tokenize(objectToTokenize).then(tokenizedBody => {
+            req.body = {...body, ...tokenizedBody};
+            req.headers['content-length'] = JSON.stringify(req.body).length;
+            next();
+        });
+    };
+}
