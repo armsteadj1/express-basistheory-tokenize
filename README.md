@@ -24,7 +24,7 @@ yarn add express-basistheory-tokenize
 
 1. Head over to [Basis Theory](https://basistheory.com) to create an account
 2. Create a new `server-to-server` Appliation with the following permissions: `token:general:create` and `token:general:read`.
-2.1. [or click here to pre-fill the Application form](https://portal.basistheory.com/applications/create?name=Express+Middleware&permissions=token%3Ageneral%3Acreate&permissions=token%3Ageneral%3Aread%3Ahigh)
+    2.1. [or click here to pre-fill the Application form](https://portal.basistheory.com/applications/create?name=Express+Middleware&permissions=token%3Ageneral%3Acreate&permissions=token%3Ageneral%3Aread%3Ahigh)
 3. Copy the API Key you create and use it below
 
 ### Set Basis Theory API Key
